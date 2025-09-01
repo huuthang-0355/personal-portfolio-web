@@ -95,6 +95,7 @@
         <link rel="stylesheet" href="./assets/css/reset.css" />
         <link rel="stylesheet" href="./assets/css/grid.css" />
         <link rel="stylesheet" href="./assets/css/styles.css" />
+        <link rel="stylesheet" href="./assets/css/responsive.css" />
     </head>
     <body>
         <!-- Header -->
@@ -109,7 +110,9 @@
                         />
                     </div>
 
-                    <div class="header__mail-addr">hi@arif.interactive</div>
+                    <div class="header__mail-addr show-on-desktop">
+                        hi@arif.interactive
+                    </div>
                 </div>
 
                 <!-- Logo -->
@@ -119,7 +122,7 @@
                     class="header__logo"
                 />
                 <!-- Navbar -->
-                <nav class="header__nav">
+                <nav class="header__nav show-on-desktop">
                     <ul class="header__list">
                         <li class="header__items">
                             <a href="#!" class="header__nav-link">Projects</a>
@@ -135,14 +138,55 @@
                         </li>
                     </ul>
                 </nav>
+
+                <!-- Tablet & mobile -->
+                <input
+                    type="checkbox"
+                    name="header__checkbox"
+                    id="header__checkbox"
+                    class="menu-check"
+                    hidden
+                />
+
+                <label for="header__checkbox" class="overlay"></label>
+
+                <div class="menu-drawer">
+                    <ul class="header__list">
+                        <li class="header__items">
+                            <a href="#!" class="header__nav-link">Projects</a>
+                        </li>
+                        <li class="header__items">
+                            <a href="#!" class="header__nav-link">Journey</a>
+                        </li>
+                        <li class="header__items">
+                            <a href="#!" class="header__nav-link">Service</a>
+                        </li>
+                        <li class="header__items">
+                            <a href="#!" class="header__nav-link">Contact</a>
+                        </li>
+
+                        <div class="header__mail-addr">hi@arif.interactive</div>
+                    </ul>
+                </div>
+                <label
+                    for="header__checkbox"
+                    class="header__menu show-on-tablet-mobile"
+                >
+                    <img
+                        src="./assets/icon/menu-icon.svg"
+                        alt=""
+                        class="header__bars"
+                    />
+                </label>
             </div>
+            <div class="separate show-on-tablet-mobile"></div>
         </header>
 
         <!-- Hero -->
         <section class="hero">
             <div class="container">
                 <div class="hero__inner row">
-                    <div class="col-lg-6">
+                    <div class="col-lg-6 second-mobile col-12">
                         <div class="hero__media">
                             <figure class="hero__picture">
                                 <img
@@ -153,7 +197,7 @@
                             </figure>
                         </div>
                     </div>
-                    <div class="col-lg-5 offset-lg-1">
+                    <div class="col-lg-5 offset-lg-1 first-mobile col-12">
                         <section class="hero__content">
                             <h1 class="hero__heading">
                                 An Interactive Designer
@@ -197,12 +241,18 @@
             <img
                 src="./assets/icon/hero-decor-left.svg"
                 alt=""
-                class="hero__decor hero__decor--left"
+                class="hero__decor hero__decor--left show-on-desktop"
             />
             <img
                 src="./assets/icon/hero-decor-right.svg"
                 alt=""
-                class="hero__decor hero__decor--right"
+                class="hero__decor hero__decor--right show-on-desktop"
+            />
+
+            <img
+                src="./assets/icon/mobile-hero-decor.svg"
+                alt=""
+                class="hero__decor hero__mobile-decor show-on-tablet-mobile"
             />
         </section>
 
@@ -210,128 +260,118 @@
             <!-- Clients -->
             <article class="clients">
                 <div class="container">
-                    <div class="row">
-                        <div class="clients__row">
-                            <!-- Content -->
-                            <div class="col-lg-4">
-                                <h2 class="clients__heading heading">
-                                    Meet my recent clients
-                                </h2>
-                            </div>
-                            <!-- Company -->
-                            <div class="col-lg-8">
-                                <div class="clients__company-list">
-                                    <div class="clients__company-logo">
-                                        <div class="clients__company-block">
-                                            <img
-                                                src="./assets/icon/google.svg"
-                                                alt=""
-                                                class="clients__company-img"
-                                            />
-                                        </div>
-
-                                        <p class="clients__company-brand">
-                                            Google
-                                        </p>
+                    <div class="clients__row row">
+                        <!-- Content -->
+                        <div class="col-lg-4 col-12">
+                            <h2 class="clients__heading heading">
+                                Meet my recent clients
+                            </h2>
+                        </div>
+                        <!-- Company -->
+                        <div class="col-lg-8 col-12">
+                            <div class="clients__company-list">
+                                <div class="clients__company-logo">
+                                    <div class="clients__company-block">
+                                        <img
+                                            src="./assets/icon/google.svg"
+                                            alt=""
+                                            class="clients__company-img"
+                                        />
                                     </div>
 
-                                    <div class="clients__company-logo">
-                                        <div class="clients__company-block">
-                                            <img
-                                                src="./assets/icon/bros.svg"
-                                                alt=""
-                                                class="clients__company-img"
-                                            />
-                                        </div>
+                                    <p class="clients__company-brand">Google</p>
+                                </div>
 
-                                        <p class="clients__company-brand">
-                                            Warner Bros
-                                        </p>
+                                <div class="clients__company-logo">
+                                    <div class="clients__company-block">
+                                        <img
+                                            src="./assets/icon/bros.svg"
+                                            alt=""
+                                            class="clients__company-img"
+                                        />
                                     </div>
 
-                                    <div class="clients__company-logo">
-                                        <div class="clients__company-block">
-                                            <img
-                                                src="./assets/icon/mailchimp.svg"
-                                                alt=""
-                                                class="clients__company-img"
-                                            />
-                                        </div>
+                                    <p class="clients__company-brand">
+                                        Warner Bros
+                                    </p>
+                                </div>
 
-                                        <p class="clients__company-brand">
-                                            Mailchimp
-                                        </p>
+                                <div class="clients__company-logo">
+                                    <div class="clients__company-block">
+                                        <img
+                                            src="./assets/icon/mailchimp.svg"
+                                            alt=""
+                                            class="clients__company-img"
+                                        />
                                     </div>
 
-                                    <div class="clients__company-logo">
-                                        <div class="clients__company-block">
-                                            <img
-                                                src="./assets/icon/adope.svg"
-                                                alt=""
-                                                class="clients__company-img"
-                                            />
-                                        </div>
+                                    <p class="clients__company-brand">
+                                        Mailchimp
+                                    </p>
+                                </div>
 
-                                        <p class="clients__company-brand">
-                                            Adobe
-                                        </p>
+                                <div class="clients__company-logo">
+                                    <div class="clients__company-block">
+                                        <img
+                                            src="./assets/icon/adope.svg"
+                                            alt=""
+                                            class="clients__company-img"
+                                        />
                                     </div>
 
-                                    <div class="clients__company-logo">
-                                        <div class="clients__company-block">
-                                            <img
-                                                src="./assets/icon/Upwork.svg"
-                                                alt=""
-                                                class="clients__company-img"
-                                            />
-                                        </div>
+                                    <p class="clients__company-brand">Adobe</p>
+                                </div>
 
-                                        <p class="clients__company-brand">
-                                            Upwork
-                                        </p>
+                                <div class="clients__company-logo">
+                                    <div class="clients__company-block">
+                                        <img
+                                            src="./assets/icon/Upwork.svg"
+                                            alt=""
+                                            class="clients__company-img"
+                                        />
                                     </div>
 
-                                    <div class="clients__company-logo">
-                                        <div class="clients__company-block">
-                                            <img
-                                                src="./assets/icon/cloud.svg"
-                                                alt=""
-                                                class="clients__company-img"
-                                            />
-                                        </div>
+                                    <p class="clients__company-brand">Upwork</p>
+                                </div>
 
-                                        <p class="clients__company-brand">
-                                            Creative Cloud
-                                        </p>
+                                <div class="clients__company-logo">
+                                    <div class="clients__company-block">
+                                        <img
+                                            src="./assets/icon/cloud.svg"
+                                            alt=""
+                                            class="clients__company-img"
+                                        />
                                     </div>
 
-                                    <div class="clients__company-logo">
-                                        <div class="clients__company-block">
-                                            <img
-                                                src="./assets/icon/woo.svg"
-                                                alt=""
-                                                class="clients__company-img"
-                                            />
-                                        </div>
+                                    <p class="clients__company-brand">
+                                        Creative Cloud
+                                    </p>
+                                </div>
 
-                                        <p class="clients__company-brand">
-                                            Woocommerce
-                                        </p>
+                                <div class="clients__company-logo">
+                                    <div class="clients__company-block">
+                                        <img
+                                            src="./assets/icon/woo.svg"
+                                            alt=""
+                                            class="clients__company-img"
+                                        />
                                     </div>
 
-                                    <div class="clients__company-logo">
-                                        <div class="clients__company-block">
-                                            <img
-                                                src="./assets/icon/Canva.svg"
-                                                alt=""
-                                                class="clients__company-img"
-                                            />
-                                        </div>
+                                    <p class="clients__company-brand">
+                                        Woocommerce
+                                    </p>
+                                </div>
 
-                                        <p class="clients__company-brand">
-                                            Canva
-                                        </p>
+                                <div class="clients__company-logo">
+                                    <div class="clients__company-block">
+                                        <img
+                                            src="./assets/icon/Canva.svg"
+                                            alt=""
+                                            class="clients__company-img"
+                                        />
                                     </div>
+
+                                    <p class="clients__company-brand">Canva</p>
                                 </div>
                             </div>
                         </div>
@@ -350,7 +390,7 @@
 
                     <!-- Items -->
                     <div class="specialties__item-list">
-                        <div class="row row-cols-3">
+                        <div class="row row-cols-lg-3 row-cols-1">
                             <!-- Item 1 -->
                             <div class="col">
                                 <article class="specialties__item">
@@ -375,7 +415,7 @@
                             </div>
 
                             <!-- Item 2 -->
-                            <div class="col">
+                            <div class="col show-on-desktop">
                                 <article class="specialties__item">
                                     <div class="specialties__icon-block">
                                         <img
@@ -398,7 +438,7 @@
                             </div>
 
                             <!-- Item 3 -->
-                            <div class="col">
+                            <div class="col show-on-desktop">
                                 <article class="specialties__item">
                                     <div class="specialties__icon-block">
                                         <img
@@ -431,7 +471,7 @@
                         <h2 class="project__heading heading">
                             Take a look at my recent projects
                         </h2>
-                        <p class="project_desc desc">
+                        <p class="project__desc desc">
                             Lorem ipsum dolor sit amet, consectetur adipiscing
                             elit. In urna, non nisl tincidunt ut elementum
                             turpis.
@@ -439,7 +479,7 @@
                     </div>
 
                     <div class="project__list">
-                        <div class="row row-cols-2">
+                        <div class="row row-cols-lg-2 row-cols-1">
                             <!-- Item 1 -->
                             <div class="col">
                                 <section class="project__item">
@@ -614,21 +654,21 @@
                             turpis.
                         </p>
 
-                        <div class="about__stats">
-                            <div class="about__row">
-                                <div class="about__col">
+                        <div class="about__stats col-10 offset-1">
+                            <div class="about__row row">
+                                <div class="col col-2">
                                     <strong class="about__number">08+</strong>
                                     <p class="about__feature">
                                         Years Experience
                                     </p>
                                 </div>
-                                <div class="about__col">
+                                <div class="col col-2">
                                     <strong class="about__number">21+</strong>
                                     <p class="about__feature">
-                                        Features & Awards
+                                        Features Awards
                                     </p>
                                 </div>
-                                <div class="about__col">
+                                <div class="col col-2">
                                     <strong class="about__number">97%</strong>
                                     <p class="about__feature">Clients Rating</p>
                                 </div>
@@ -890,21 +930,21 @@
 
                         <div class="environment__list">
                             <div class="row">
-                                <div class="col-lg-4">
+                                <div class="col-lg-4 col-12">
                                     <img
                                         src="./assets/img/env-img-01.png"
                                         alt=""
                                         class="environment__img"
                                     />
                                 </div>
-                                <div class="col-lg-4">
+                                <div class="col-lg-4 col-12 show-on-desktop">
                                     <img
                                         src="./assets/img/env-img-02.png"
                                         alt=""
                                         class="environment__img"
                                     />
                                 </div>
-                                <div class="col-lg-4">
+                                <div class="col-lg-4 col-12 show-on-desktop">
                                     <img
                                         src="./assets/img/env-img-03.png"
                                         alt=""
@@ -912,6 +952,14 @@
                                     />
                                 </div>
                             </div>
+                        </div>
+
+                        <div class="environment__next show-on-tablet-mobile">
+                            <img
+                                src="./assets/icon/Sliter.svg"
+                                alt=""
+                                class="feedback__next-img"
+                            />
                         </div>
                     </div>
                 </div>
@@ -943,7 +991,7 @@
                     <img
                         src="./assets/icon/banner-decor-01.svg"
                         alt=""
-                        class="banner__decor banner__decor--left"
+                        class="banner__decor banner__decor--left show-on-desktop"
                     />
                     <img
                         src="./assets/icon/banner-decor-02.svg"
@@ -953,7 +1001,7 @@
                     <img
                         src="./assets/icon/banner-decor-03.svg"
                         alt=""
-                        class="banner__decor banner__decor--right"
+                        class="banner__decor banner__decor--right show-on-desktop"
                     />
                 </div>
             </article>
@@ -1007,7 +1055,7 @@
                         </ul>
                     </nav>
                 </div>
-                <hr class="footer__separate" />
+                <hr class="footer__separate show-on-desktop" />
                 <div class="footer__bot">
                     <p class="footer__copywright">
                         ©interactiveArif 2021. All rights reserved.
